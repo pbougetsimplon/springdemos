@@ -41,3 +41,7 @@ Vous pouvez lister tous les apprenants ou toutes les régions au format JSON dan
 Vous pouvez rechercher un apprenant par son **id**
 
 Cette exemple permet de découvrir comment simplifier l'accès à la base de données grâce aux annotations.
+
+## Spring pratique01 (Web - Spring - HYML - JSON - AJAX)
+
+Autre démo basique
