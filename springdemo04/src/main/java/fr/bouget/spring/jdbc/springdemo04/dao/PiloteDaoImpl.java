@@ -41,11 +41,10 @@ public class PiloteDaoImpl implements PiloteDao {
 	 * @return
 	 */
 	@Override
-	public List<Pilote> findByNom (String nom){
+	public Pilote findByNom (String nom){
 		log.info(MessageFormat.format("Méthode findByNom() => rechercher un pilote dont le nom est {0}:", nom));
+		return jdbcTemplate.queryForObject("SELECT * FROM pilote WHERE PI_NOM = ?",new Object[]{nom}, new PiloteMapper());
 
-		return jdbcTemplate.query(
-				"SELECT * FROM pilote WHERE PI_NOM = ?", new Object[] { nom }, new PiloteMapper());
 	}
 	/**
 	 * Méthode pour rechercher tous les pilotes de la table
@@ -78,6 +77,24 @@ public class PiloteDaoImpl implements PiloteDao {
 
 		return keyHolder.getKey().intValue();
 	}
+	
+	// Voici ce que vous pouvez utiliser si la clef n'est pas auto-générée
+	// il faut aussi redéfinir la méthode dans PiloteDao qui ne renvoie plus de int
+	//@Override
+	/**
+	 * Méthode pour ajouter un pilote sans clef auto-générée
+	 * par MySQL.
+	 */
+//	public addPilote(Pilote pilote) {
+//		
+//		jdbcTemplate.update(
+//				"INSERT INTO pilote (PI_ID, PI_NOM, PI_SITE) VALUES (?,?,?)",
+//				count()+1,
+//				pilote.getNom(),
+//				pilote.getSite());
+//	}
+	
+	
 
 	@Override
 	/**
@@ -101,7 +118,16 @@ public class PiloteDaoImpl implements PiloteDao {
 				pilote.getSite(),
 				pilote.getId());
 	}
+	
 
+	/**
+	 * Retourne l'id le pilote avec l'id le plus élevé si pas auto-généré
+	 * @return
+	 */
+	@Override
+	public int count() {
+	return jdbcTemplate.queryForObject("select max(PI_ID) from pilote", Integer.class);
+	}
 
 	/**
 	 * Classe privée interne
@@ -119,5 +145,5 @@ public class PiloteDaoImpl implements PiloteDao {
 			return p;
 		}
 	}
-
+	
 }

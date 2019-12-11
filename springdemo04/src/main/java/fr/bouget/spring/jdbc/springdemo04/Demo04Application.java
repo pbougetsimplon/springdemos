@@ -24,10 +24,14 @@ public class Demo04Application implements CommandLineRunner {
 	 */
 	public static void main(String[] args) {
 		SpringApplication.run(Demo04Application.class, args);
+		
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
+		
+		Integer maxid = piloteDao.count();
+		System.out.println("identifiant maxi = "+maxid.intValue());
 
 		// on suppose que la table Pilote existe et qu'elle contient des enregistrements.
 		// petit test
@@ -37,10 +41,8 @@ public class Demo04Application implements CommandLineRunner {
 		}
 
 		// on recherche élodie
-		List<Pilote> elodies = piloteDao.findByNom("ELODIE");
-		for (Pilote pilote : elodies) {
-			System.out.println(pilote);
-		}
+		Pilote elodie = piloteDao.findByNom("ELODIE");
+		System.out.println("Pilote trouvé : "+elodie);
 		
 		// ajouter pilote
 		Pilote p= new Pilote();
@@ -49,7 +51,7 @@ public class Demo04Application implements CommandLineRunner {
 		p.setId(piloteDao.addPilote(p));
 		System.out.println("Ajout de Philippe -  Paris : "+p);
 		
-		// modifieer le site du pilote p avec Avignon au lieu de Paris
+		// modifier le site du pilote p avec Avignon au lieu de Paris
 		System.out.println("Modification du Pilote "+p.getNom()+" pour le nouveau site Avignon");
 		p.setSite("Avignon");
 		piloteDao.updatePilote(p);
@@ -63,6 +65,8 @@ public class Demo04Application implements CommandLineRunner {
 		
 		// détruire le pilote dans la base !
 		piloteDao.removePilote(toto);
+		
+
 
 	}
 }
