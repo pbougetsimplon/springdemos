@@ -42,6 +42,12 @@ Vous pouvez rechercher un apprenant par son **id**
 
 Cette exemple permet de découvrir comment simplifier l'accès à la base de données grâce aux annotations.
 
-## Spring pratique01 (Web - Spring - HYML - JSON - AJAX)
+## Spring pratique01 (Web - Spring - HTML - JSON - AJAX)
 
 Autre démo basique
+
+## Spring pratique02 (Web - JSON - JPA - Hibernate - SpringBoot)
+
+Cet exemple permet de comprendre le lien entre un Front JS et un Back SpringBoot associé à JPA/Hibernate.
+
+Il faut juste créer une base de données **pratique3** et modifier le fichier **applications.properties**.
