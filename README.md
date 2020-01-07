@@ -29,7 +29,7 @@ Il y a 2 versions de la méthode pour ajouter un pilote :
 - Version non commentée en supposant que la clef primaire `PI_ID` de la table pilote est **auto-générée**
 - Version commentée à utiliser si votre clef primaire `PI_ID`n'est pas auto-générée (Atttention, dans ce cas la méthode ne doit pas retourner un int !)  
 
-## Spring-hibernate (Web - RestController - JPA - Hibernate- Session4)
+## Spring-hibernate (Web - RestController - JPA - Hibernate)
 
 Dans cet exemple, vous avez 2 classes **@Entity** : 
 
@@ -52,7 +52,7 @@ Cet exemple permet de comprendre le lien entre un Front JS et un Back SpringBoot
 
 Il faut juste créer une base de données **pratique3** et modifier le fichier **applications.properties**.
 
-## Mapping avec JPA/Hibernate et SpringBoot
+## Mapping avec JPA/Hibernate et SpringBoot - (Session4)
 
 ### 1 - ENTITE VIN - PERSISTANCE **pinard01** avec  identifiant *NON AUTO-GENERE*
 
