@@ -29,7 +29,7 @@ Il y a 2 versions de la méthode pour ajouter un pilote :
 - Version non commentée en supposant que la clef primaire `PI_ID` de la table pilote est **auto-générée**
 - Version commentée à utiliser si votre clef primaire `PI_ID`n'est pas auto-générée (Atttention, dans ce cas la méthode ne doit pas retourner un int !)  
 
-## Spring-hibernate (Web - RestController - JPA - Hibernate)
+## Spring-hibernate (Web - RestController - JPA - Hibernate- Session4)
 
 Dans cet exemple, vous avez 2 classes **@Entity** : 
 
