@@ -62,13 +62,17 @@ Il faut juste créer une base de données **pratique3** et modifier le fichier *
 
 ![pinard01](images/pinard01.png)
 
-### 3 - ENTITE VIN : CLE PRIMAIRE COMPOSITE avec **@IdClass** **pinard03**
+### 3 - ENTITE VIN : CLE PRIMAIRE COMPOSITE avec **@IdClass** : **pinard03**
 
 Pour ce projet (démo), on utilise **Lombok** pour réduire le code de l'entité **Vin**. Il faut penser à installer le JAR dans votre IDE et l'ajouter dans votre dépendance **Gradle** ou **Maven**.
 
 ![pinard03](images/tp3-clef-composite-1.png)
 
-### 4 - ENTITE VIN : CLE PRIMAIRE COMPOSITE avec **EmbeddedId** <!--(**[pinard04](exercices/pinard04-entity-clef-composee-EmbeddedId.md.md)**)-->
+### 4 - ENTITE VIN : CLE PRIMAIRE COMPOSITE avec **EmbeddedId** : **pinard04**
+
+Pour ce projet, pas de Lombok.
+
+![pinard03](images/tp3-clef-composite-1.png)
 
 ### 5 - ENTITE CLIENT : MAPPING MULTI-TABLES avec **@SecondaryTable** **client01**
 
