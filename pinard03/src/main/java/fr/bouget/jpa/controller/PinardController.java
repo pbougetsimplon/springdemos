@@ -81,7 +81,6 @@ public class PinardController {
 		v4=ajoutVin(v4);
 
 		updateQuantite(new VinPK(v4.getCodeProduit(),v4.getDesignation()),40);
-		updateVin(v3);
 
 		StringBuilder sb = new StringBuilder();
 		sb.append("<h1>Regardez dans votre console et dans votre base de données MySQL <strong>JPA</strong></h1>");
