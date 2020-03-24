@@ -52,6 +52,10 @@ Cet exemple permet de comprendre le lien entre un Front JS et un Back SpringBoot
 
 Il faut juste créer une base de données **pratique3** et modifier le fichier **applications.properties**.
 
+## Mise en place de JWT avec en Back (Spring) et en Front (Angular) (Sources : Jules)
+
+[C'est par ici](maven-workshop-cinema-master/README.md)
+
 ## Mapping avec JPA/Hibernate et SpringBoot - (Session4)
 
 ### 1 - ENTITE VIN - PERSISTANCE **pinard01** avec  identifiant *NON AUTO-GENERE*
