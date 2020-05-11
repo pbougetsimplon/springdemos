@@ -1,0 +1,20 @@
+# IntelliJ #
+.idea
+**.iml
+
+## Angular ##
+# compiled output
+cinema-app-front/dist
+cinema-app-front/target
+cinema-app-front/node
+
+# dependencies
+cinema-app-front/node_modules
+
+# e2e
+cinema-app-front/e2e/*.js
+cinema-app-front/e2e/*.map
+
+### Spring boot ###
+cinema-app-api/target/
+cinema-app-api/.mvn

@@ -1,0 +1,17 @@
+<h2>Liste des films</h2>
+<table>
+  <thead>
+  <tr>
+    <th>Titre du film</th>
+    <th>Durée (min)</th>
+    <th>Catégorie</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let movie of movieList">
+    <td>{{movie.name}}</td>
+    <td>{{movie.duration}}</td>
+    <td>{{movie.category?.name}}</td>
+  </tr>
+  </tbody>
+</table>
